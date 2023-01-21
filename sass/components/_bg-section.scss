@@ -8,11 +8,12 @@
     url(../images/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   &__container {
     text-align: center;
+    justify-content: center;
   }
 
   &__button {
@@ -28,5 +29,12 @@
     border: none;
     padding: 10px 42px;
     margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .background-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }

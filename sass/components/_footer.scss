@@ -5,19 +5,28 @@
 
   &__section {
     display: flex;
+    flex-direction: column;
   }
 
   &__nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding-top: 60px;
     padding-bottom: 60px;
   }
 
   &__nav-logo {
-    margin: 0px;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
   }
 
   &__contacts {
+    display: flex;
+    justify-content: center;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -27,13 +36,19 @@
     margin-top: 20px;
   }
 
+  &__contacts ul:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
   &__contacts-element {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     line-height: 1.5;
   }
 
-  &__contacts-element:not(:last-child) {
-    margin-bottom: 9px;
+  &__contacts-address {
+    color: var(--background-white);
   }
 
   &__contacts-link {
@@ -41,116 +56,138 @@
     text-decoration: none;
     color: var(--text-color);
   }
-
-  &__contacts-address {
-    color: var(--background-white);
-  }
-
   &__social {
     box-sizing: border-box;
     display: block;
-    margin-top: 72px;
-    margin-left: 70px;
+    margin-top: 60px;
   }
+}
 
-  &__social-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-  }
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__section {
+      display: flex;
+      flex-direction: row;
+    }
 
-  &__social-element {
-    background-color: var(--icons-inactive-footer);
-    display: flex;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 250ms;
-  }
+    &__nav {
+      display: block;
+    }
 
-  &__social-icon {
-    fill: var(--background-white);
-  }
+    &__nav-logo {
+      margin: 0px;
+    }
 
-  &__social-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--background-white);
-    margin-bottom: 20px;
-  }
+    &__contacts-element:not(:last-child) {
+      margin-bottom: 9px;
+    }
 
-  &__newsletter {
-    display: flex;
-  }
+    &__social {
+      box-sizing: border-box;
+      display: block;
+      margin-top: 72px;
+      margin-left: 70px;
+    }
 
-  &__newsletter-button {
-    white-space: nowrap;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    color: var(--background-white);
-    background: var(--active-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-    margin-left: 12px;
-    margin-top: 108px;
-    margin-bottom: 94px;
-    padding: 10px 28px 10px 42px;
-  }
+    &__social-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
 
-  &__newsletter-label {
-    width: 358px;
-    box-sizing: content-box;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--background-white);
-    margin-bottom: 20px;
-    margin-top: 72px;
-    margin-left: 78px;
-  }
+    &__social-element {
+      background-color: var(--icons-inactive-footer);
+      display: flex;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 250ms;
+    }
 
-  &__newsletter-input {
-    background-color: var(--background-dark-grey);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    width: 358px;
-    padding-top: 15px;
-    padding-left: 16px;
-    padding-bottom: 15px;
-    margin-top: 20px;
-    outline: 0;
-    color: var(--contacts-footer);
-  }
+    &__social-icon {
+      fill: var(--background-white);
+    }
 
-  &__newsletter-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
-  }
+    &__social-title {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--background-white);
+      margin-bottom: 20px;
+    }
 
-  &__newsletter-icon {
-    fill: var(--background-white);
-    margin-left: 24px;
-  }
+    &__newsletter {
+      display: flex;
+    }
 
-  &__social-element:hover,
-  &__social-element:focus {
-    background-color: var(--active-color);
-  }
+    &__newsletter-button {
+      white-space: nowrap;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.88;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      color: var(--background-white);
+      background: var(--active-color);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 4px;
+      border: none;
+      margin-left: 12px;
+      margin-top: 108px;
+      margin-bottom: 94px;
+      padding: 10px 28px 10px 42px;
+    }
 
-  &__contacts-link:hover,
-  &__contacts-link:focus {
-    color: var(--active-color);
+    &__newsletter-label {
+      width: 358px;
+      box-sizing: content-box;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--background-white);
+      margin-bottom: 20px;
+      margin-top: 72px;
+      margin-left: 78px;
+    }
+
+    &__newsletter-input {
+      background-color: var(--background-dark-grey);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 4px;
+      width: 358px;
+      padding-top: 15px;
+      padding-left: 16px;
+      padding-bottom: 15px;
+      margin-top: 20px;
+      outline: 0;
+      color: var(--contacts-footer);
+    }
+
+    &__newsletter-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__newsletter-icon {
+      fill: var(--background-white);
+      margin-left: 24px;
+    }
+
+    &__social-element:hover,
+    &__social-element:focus {
+      background-color: var(--active-color);
+    }
+
+    &__contacts-link:hover,
+    &__contacts-link:focus {
+      color: var(--active-color);
+    }
   }
 }

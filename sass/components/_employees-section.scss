@@ -1,12 +1,35 @@
 .employees {
   background: var(--background-grey);
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &__list {
     list-style-type: none;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__element {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--background-white);
+  }
+
+  &__element:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__text-position {
+    display: flex;
+    flex-direction: column;
+  }
+  &__overlay {
+    padding: 30px;
+    padding-bottom: 16px;
   }
 
   &__name {
@@ -28,34 +51,6 @@
     color: var(--text-color);
   }
 
-  &__overlay {
-    padding: 30px;
-    padding-bottom: 16px;
-  }
-
-  &__text-position {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__element {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    background-color: var(--background-white);
-  }
-
-  &__element:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &__icons-svg {
-    fill: var(--icons-inactive);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
   &__icons {
     list-style: none;
     display: flex;
@@ -75,6 +70,11 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  &__icons-svg {
+    fill: var(--icons-inactive);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   &__icons-element:hover,
   &__icons-element:focus {
     background-color: var(--active-color);
@@ -82,5 +82,25 @@
   &__icons-element:hover &__icons-svg,
   &__icons-element:focus &__icons-svg {
     fill: var(--background-white);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .employees {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__list {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+
+    &__element {
+      margin-bottom: 0;
+    }
+
+    &__element:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
