@@ -32,6 +32,7 @@
     max-width: 450px;
     max-height: 460px;
   }
+
   &__overlay {
     padding: 30px;
     padding-bottom: 16px;
@@ -90,6 +91,27 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .employees {
+    &__img {
+      min-width: 354px;
+    }
+
+    &__element {
+      width: calc(50% - 30px);
+      max-width: 450px;
+    }
+
+    &__element:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
+    &__list {
+      gap: 30px;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .employees {
     padding-top: 94px;
@@ -97,11 +119,11 @@
 
     &__list {
       flex-wrap: nowrap;
-      justify-content: flex-start;
     }
 
     &__element {
       margin-bottom: 0;
+      width: 270px;
     }
 
     &__element:not(:last-child) {
@@ -109,11 +131,11 @@
     }
 
     &__element:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 0px;
     }
+
     &__img {
-      width: 270px;
-      height: 260px;
+      min-width: 270px;
     }
   }
 }

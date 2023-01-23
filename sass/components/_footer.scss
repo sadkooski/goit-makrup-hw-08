@@ -35,15 +35,14 @@
     margin-top: 20px;
   }
 
-  &__contacts ul:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
   &__contacts-element {
     display: flex;
     justify-content: center;
     list-style-type: none;
     line-height: 1.5;
+  }
+  &__contacts-element:not(:last-child) {
+    margin-bottom: 8px;
   }
 
   &__contacts-address {
@@ -166,6 +165,23 @@
   &__contacts-link:hover,
   &__contacts-link:focus {
     color: var(--active-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__tablet-position {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    &__social {
+      margin-top: 65px;
+    }
+
+    &__newsletter-label {
+      margin-top: 0px;
+    }
   }
 }
 
