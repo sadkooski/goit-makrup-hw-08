@@ -71,11 +71,14 @@
 
 @media screen and (min-width: 1200px) {
   .paragraphs {
+    display: flex;
+    justify-content: center;
     &__list {
       flex-wrap: nowrap;
     }
 
     &__element {
+      width: 270px;
       margin-left: 0;
       margin-right: 0;
       padding: 0;

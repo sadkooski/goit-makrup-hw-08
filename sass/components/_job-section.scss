@@ -8,7 +8,6 @@
     margin-top: 94px;
 
     &__list {
-      justify-content: center;
       display: flex;
       list-style-type: none;
       font-weight: 700;
@@ -16,7 +15,7 @@
       line-height: 1.16;
       letter-spacing: 0.03em;
       color: var(--title-color);
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     &__card {
