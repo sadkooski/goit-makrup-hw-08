@@ -47,6 +47,28 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .paragraphs {
+    &__list {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    &__element {
+      box-sizing: border-box;
+      width: 50%;
+      margin: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    &__title {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .paragraphs {
     &__list {
