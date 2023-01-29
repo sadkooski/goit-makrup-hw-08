@@ -103,6 +103,10 @@
       margin-right: 50px;
     }
 
+    &__contacts-element:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
     &__contacts-link {
     }
 
