@@ -1,5 +1,6 @@
 .menu {
-  opacity: 0;
+  display: flex;
+  opacity: 1;
   display: block;
   top: 0;
   left: 0;
@@ -7,4 +8,93 @@
   background-color: var(--background-white);
   height: 100vh;
   width: 100vh;
+  max-width: 767px;
+  padding-left: 40px;
+  padding-right: 25px;
+
+  &__btn {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__close-button {
+    background: none;
+    color: inherit;
+    border: none;
+    display: flex;
+    margin-top: 21px;
+  }
+
+  &__svg {
+    fill: black;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 8.5px;
+    gap: 32px;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 47px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-family: var(--main-font-family);
+    color: var(--title-color);
+  }
+
+  &__contacts {
+    list-style: none;
+    margin-top: 306px;
+  }
+
+  &__contacts-tel {
+    display: flex;
+    text-decoration: none;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-family: var(--main-font-family);
+    color: var(--text-color);
+  }
+
+  &__contacts-mail {
+    display: flex;
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-family: var(--main-font-family);
+    color: var(--text-color);
+    margin-top: 32px;
+  }
+
+  &__media {
+    display: flex;
+    list-style: none;
+    margin-top: 64px;
+    gap: 10px;
+  }
+
+  &__media-link {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-family: var(--main-font-family);
+    color: var(--active-color);
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &__media-link:nth-child(4) {
+    border: none;
+  }
 }
