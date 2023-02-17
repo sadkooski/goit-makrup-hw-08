@@ -8,5 +8,6 @@
   ],
   "liveSassCompile.settings.includeItems": ["/sass/main.scss"],
   "liveSassCompile.settings.generateMap": true,
-  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveServer.settings.port": 5501
 }
